@@ -3,7 +3,7 @@ spring:
     name: EjemploSprintSecurityConJWT
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/postgres
+    url: jdbc:postgresql://localhost:5432/ddbbJWT
     username: postgres
     password: root
     driver-class-name: org.postgresql.Driver

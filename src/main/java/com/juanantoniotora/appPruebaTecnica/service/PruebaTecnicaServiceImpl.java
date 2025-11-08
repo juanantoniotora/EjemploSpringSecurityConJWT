@@ -31,7 +31,7 @@ public class PruebaTecnicaServiceImpl implements PruebaTecnicaService {
 
     public static final String TOPIC = "topic_request";
 
-    public static final String REQUEST_REPLY_TOPIC = "topic_response";
+    public static final String REQUEST_REPLY_TOPIC = "topic_reply";
 
     final Logger logger = LoggerFactory.getLogger(PruebaTecnicaServiceImpl.class);
 
