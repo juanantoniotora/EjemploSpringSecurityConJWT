@@ -1,0 +1,20 @@
+JWT significa Json Web Token. Es un estándar abierto (RFC 7519) que define un formato compacto y autónomo para transmitir información segura entre partes como un objeto JSON. Los JWT son comúnmente utilizados para autenticación y autorización en aplicaciones web.
+Un JWT consta de tres partes principales: el encabezado (header), el cuerpo (payload) y la firma (signature). Estas partes están codificadas en Base64 y separadas por puntos.
+1. Encabezado (Header): Contiene metadatos sobre el token, como el tipo de token (JWT) y el algoritmo de firma utilizado (por ejemplo, HMAC SHA256 o RSA).
+2. Cuerpo (Payload): Contiene las declaraciones (claims) que representan la información que
+se desea transmitir. Estas declaraciones pueden ser sobre un usuario y datos adicionales. Hay tres tipos de declaraciones: registradas, públicas y privadas.
+3. Firma (Signature): Se utiliza para verificar que el token no ha sido alterado.
+Para crear la firma, se toma el encabezado codificado en Base64, el cuerpo codificado en Base64, una clave secreta y se aplica el algoritmo especificado en el encabezado.
+Los JWT son ampliamente utilizados en aplicaciones web modernas debido a su capacidad para ser transmitidos de manera
+segura y eficiente entre el cliente y el servidor. Permiten la autenticación sin estado, lo que significa que el servidor no necesita almacenar información de sesión, ya que toda la información necesaria está contenida en el token.
+Sin embargo, es importante manejar los JWT con cuidado, ya que si la clave secreta se
+compromete, un atacante podría crear tokens válidos y acceder a recursos protegidos. Además, los JWT no deben contener información sensible sin cifrado adicional, ya que pueden ser decodificados fácilmente.
+Para implementar JWT en una aplicación, generalmente se siguen estos pasos:
+1. El usuario inicia sesión proporcionando sus credenciales.
+2. El servidor verifica las credenciales y, si son válidas, crea un JWT que contiene la información del usuario y lo firma con una clave secreta.
+3. El servidor envía el JWT al cliente.
+4. El cliente almacena el JWT (por ejemplo, en el almacenamiento local o en una cookie) y lo incluye en las solicitudes posteriores al servidor, generalmente en el encabezado Authorization.
+5. El servidor verifica la firma del JWT en cada solicitud para autenticar al usuario y autorizar el acceso a los recursos protegidos.
+En resumen, los JWT son una herramienta poderosa para la autenticación y autorización en aplicaciones web, proporcionando una forma segura y eficiente de transmitir información entre partes.
+Para más información, puedes visitar el sitio oficial: https://jwt.io/
+
